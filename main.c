@@ -11,7 +11,7 @@ int main() {
     
     scanf("%c",&choose);
 
-    while (choose != 'D'){
+    while (choose != 'D' && choose != 'EOF'){
         
 
         if(choose == 'A')
