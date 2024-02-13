@@ -1,8 +1,5 @@
 CC = gcc
 CFLAGS = -Wall
-TARGET = my_graph
-SRCS = my_graph.c my_mat.c
-OBJS = $(SRCS:.c=.o)
 
 all: my_graph my_Knapsack
 
@@ -21,6 +18,4 @@ my_mat.c: my_mat.h
 .PHONY: clean all
 
 clean:
-	rm -f $(TARGET) $(OBJS)
-
-
+	rm -f *.o my_graph my_Knapsack
