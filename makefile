@@ -1,10 +1,10 @@
 CC = gcc
 CFLAGS = -Wall
-TARGET = my_graph
+TARGET = my_program
 SRCS = my_graph.c my_mat.c
 OBJS = $(SRCS:.c=.o)
 
-all: my_graph
+all: my_program
 
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS)
@@ -12,7 +12,7 @@ $(TARGET): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-.PHONY: aclean all
+.PHONY: clean all
 
 clean:
 	rm -f $(TARGET) $(OBJS)
